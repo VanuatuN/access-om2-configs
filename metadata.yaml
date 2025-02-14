@@ -32,8 +32,8 @@ license: CC-BY-4.0
 model: ACCESS-OM2
 version: '2.0'
 url: https://github.com/ACCESS-NRI/access-om2-configs
-experiment_uuid: 91ee8546-e5a2-4242-9608-07ef37d4ccfd
-name: 1deg_jra55_ryf-expt-91ee8546
+experiment_uuid: 5afcf979-5183-41e4-955c-87f86cf86413
+name: 1deg_jra55_ryf-expt-5afcf979
 schema_version:  # The version of the schema (string)
 long_description: # Long description of the experiment (string)
 frequency: # The frequency(/ies) included in the experiment (string)
