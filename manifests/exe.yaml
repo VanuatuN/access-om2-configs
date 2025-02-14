@@ -2,17 +2,17 @@ format: yamanifest
 version: 1.0
 ---
 work/atmosphere/yatm.exe:
-  fullpath: /g/data/vk83/apps/spack/0.20/release/linux-rocky8-x86_64/intel-19.0.5.281/libaccessom2-git.2023.10.26=2023.10.26-ltfg7jcn6t4cefotvj3kjnyu5nru26xo/bin/yatm.exe
+  fullpath: /leonardo_scratch/large/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/libaccessom2-master-tqkpbd6z5fimuedszsnqmd3w627x7elu/bin/yatm.exe
   hashes:
-    binhash: 4e8b4ef76e971c4af3b26cfac632e160
-    md5: 5baa1d417fe6708fc30cbeaa57d82f96
+    binhash: fc67869550b18c20fc713656daf618a7
+    md5: 1eae575432e642d60e006fc68bfcadcf
 work/ice/cice_auscom_360x300_24x1_24p.exe:
-  fullpath: /g/data/vk83/apps/spack/0.20/release/linux-rocky8-x86_64/intel-19.0.5.281/cice5-git.2023.10.19=2023.10.19-v3zncpqjj2gyseudbwiudolcjq3k3leo/bin/cice_auscom_360x300_24x1_24p.exe
+  fullpath: /leonardo_scratch/large/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/cice5-master-2cqzrfobwphbj27loirf6plzpbrbtlmn/bin/cice_auscom_360x300_24x1_24p.exe
   hashes:
-    binhash: 3a65f67d21152e77034da28c22a94c66
-    md5: 37866455b057c85c3ea50c0ef0ea840b
+    binhash: b324b868c4709a306f9f43906557319a
+    md5: 8d092e7212e3b99aa389be5d740484ef
 work/ocean/fms_ACCESS-OM.x:
-  fullpath: /g/data/vk83/apps/spack/0.20/release/linux-rocky8-x86_64/intel-19.0.5.281/mom5-git.2023.11.09=2023.11.09-qji4nlmr6utrribaiyhewe4je6mifguz/bin/fms_ACCESS-OM.x
+  fullpath: /leonardo_scratch/large/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/mom5-master-xpemflbdqur3nlgvx64dq4635vpq65yz/bin/fms_ACCESS-OM.x
   hashes:
-    binhash: 92ce1ff1a38f44f92ceafd67e8e7142c
-    md5: a3f10baeadb88e813b4a8121f61a6226
+    binhash: 8064017dd1ef1e1b173b7d72ad86797a
+    md5: 5ffac37f530a8b984899cbb46f561d4b

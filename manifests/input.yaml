@@ -2,193 +2,458 @@ format: yamanifest
 version: 1.0
 ---
 work/INPUT/JRA55_MOM1_conserve2nd.nc:
-  fullpath: /g/data/vk83/experiments/inputs/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/JRA55_MOM1_conserve2nd.nc
+  fullpath: /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/JRA55_MOM1_conserve2nd.nc
   hashes:
-    binhash: abe66e4b33cbb75d25c010ea5f96f053
+    binhash: 7fa11327262459459614a8df9b4e8823
     md5: 00be8ec0f1126055b65dc68178ce4eb5
 work/INPUT/JRA55_MOM1_patch.nc:
-  fullpath: /g/data/vk83/experiments/inputs/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/JRA55_MOM1_patch.nc
+  fullpath: /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/JRA55_MOM1_patch.nc
   hashes:
-    binhash: af316080d1711daa25abadbf0548718c
+    binhash: 0fd3b7163486ecc76a0addf8bae11370
     md5: 6c345282e51521828f62b842e58dd734
 work/INPUT/rmp_jra55_cice_1st_conserve.nc:
-  fullpath: /g/data/vk83/experiments/inputs/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/rmp_jra55_cice_1st_conserve.nc
+  fullpath: /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/rmp_jra55_cice_1st_conserve.nc
   hashes:
-    binhash: bee0b815a97dc6eaf8c2417b4579a31f
+    binhash: d70729a73a08e01d9153f7c3dae34087
     md5: 6404d936d4898e5ed31e62b585d630cf
 work/INPUT/rmp_jra55_cice_2nd_conserve.nc:
-  fullpath: /g/data/vk83/experiments/inputs/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/rmp_jra55_cice_2nd_conserve.nc
+  fullpath: /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/rmp_jra55_cice_2nd_conserve.nc
   hashes:
-    binhash: 57da74118e8eb06d0c26255fd0b8e6db
+    binhash: eb63fdc37eddee6ce655c6969f95e670
     md5: 79885c8149d65a55d093244935f62360
 work/INPUT/rmp_jra55_cice_patch.nc:
-  fullpath: /g/data/vk83/experiments/inputs/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/rmp_jra55_cice_patch.nc
+  fullpath: /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/rmp_jra55_cice_patch.nc
   hashes:
-    binhash: f317a81f25961ba37f27b873b364a8d6
+    binhash: 03dc6b83ab79d641dac861d7633871a0
     md5: aa91ea2e3cdef04f58ed5db8f8d7de6d
+work/atmosphere/INPUT/.git/COMMIT_EDITMSG:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/COMMIT_EDITMSG
+  hashes:
+    binhash: 9a7a7d32d744b47a7ef7928ed5964b89
+    md5: 043d75588cf03a3dfe39d5fcfe8519c2
+work/atmosphere/INPUT/.git/FETCH_HEAD:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/FETCH_HEAD
+  hashes:
+    binhash: fbc450a4c873f939b82c3a07dfeb4c15
+    md5: bb6fe93f7f46927dd99e4e7b90dbf8bf
+work/atmosphere/INPUT/.git/HEAD:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/HEAD
+  hashes:
+    binhash: c41b81e82ea527cf5e64a5fc00bbfc62
+    md5: 88af010378e09a7329ac2f3e295411e2
+work/atmosphere/INPUT/.git/ORIG_HEAD:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/ORIG_HEAD
+  hashes:
+    binhash: cb18dfbba0d8b9c6fd96d4e7469c41e2
+    md5: f6eccd404418d6b7cfdb2cc08e97f67b
+work/atmosphere/INPUT/.git/config:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/config
+  hashes:
+    binhash: b5ea2f8dcd576a0085c9bb959cf25b6b
+    md5: 1312bbc1920e98ba4cfdc1b575984de7
+work/atmosphere/INPUT/.git/description:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/description
+  hashes:
+    binhash: 400afc7966ce51f109f7940325af5354
+    md5: a0a7c3fff21f2aea3cfa1d0316dd816c
+work/atmosphere/INPUT/.git/hooks/applypatch-msg.sample:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/hooks/applypatch-msg.sample
+  hashes:
+    binhash: 1ed92219a060ebd3f7ae800783df55ba
+    md5: ce562e08d8098926a3862fc6e7905199
+work/atmosphere/INPUT/.git/hooks/commit-msg.sample:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/hooks/commit-msg.sample
+  hashes:
+    binhash: 43ad20099f2aaba46d65971170283ba0
+    md5: 579a3c1e12a1e74a98169175fb913012
+work/atmosphere/INPUT/.git/hooks/fsmonitor-watchman.sample:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/hooks/fsmonitor-watchman.sample
+  hashes:
+    binhash: 80700e4bd0048568af48a7f5c4d73807
+    md5: a0b2633a2c8e97501610bd3f73da66fc
+work/atmosphere/INPUT/.git/hooks/post-update.sample:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/hooks/post-update.sample
+  hashes:
+    binhash: f817aff5b26a54cd8f38a68656f797dc
+    md5: 2b7ea5cee3c49ff53d41e00785eb974c
+work/atmosphere/INPUT/.git/hooks/pre-applypatch.sample:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/hooks/pre-applypatch.sample
+  hashes:
+    binhash: 1173a57581edb9168f7c2b5beb5a3a03
+    md5: 054f9ffb8bfe04a599751cc757226dda
+work/atmosphere/INPUT/.git/hooks/pre-commit.sample:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/hooks/pre-commit.sample
+  hashes:
+    binhash: 8c47156e305a28877147f283e85c21f4
+    md5: 5029bfab85b1c39281aa9697379ea444
+work/atmosphere/INPUT/.git/hooks/pre-merge-commit.sample:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/hooks/pre-merge-commit.sample
+  hashes:
+    binhash: c18be088b4c090ba33efe8c6bc8cf395
+    md5: 39cb268e2a85d436b9eb6f47614c3cbc
+work/atmosphere/INPUT/.git/hooks/pre-push.sample:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/hooks/pre-push.sample
+  hashes:
+    binhash: b1ad6993171ef0a299ec56aa38b6dd1a
+    md5: 2c642152299a94e05ea26eae11993b13
+work/atmosphere/INPUT/.git/hooks/pre-rebase.sample:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/hooks/pre-rebase.sample
+  hashes:
+    binhash: 8779e5237a098f81f540b40fdc8ad5fe
+    md5: 56e45f2bcbc8226d2b4200f7c46371bf
+work/atmosphere/INPUT/.git/hooks/pre-receive.sample:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/hooks/pre-receive.sample
+  hashes:
+    binhash: 8ba5baaf35d1c720be58f782bbc031bb
+    md5: 2ad18ec82c20af7b5926ed9cea6aeedd
+work/atmosphere/INPUT/.git/hooks/prepare-commit-msg.sample:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/hooks/prepare-commit-msg.sample
+  hashes:
+    binhash: 47c8b72e9fe38c7072de14046fd06dc0
+    md5: 2b5c047bdb474555e1787db32b2d2fc5
+work/atmosphere/INPUT/.git/hooks/push-to-checkout.sample:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/hooks/push-to-checkout.sample
+  hashes:
+    binhash: 58e88f778782dfda29c491ba777eb9f0
+    md5: c7ab00c7784efeadad3ae9b228d4b4db
+work/atmosphere/INPUT/.git/hooks/sendemail-validate.sample:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/hooks/sendemail-validate.sample
+  hashes:
+    binhash: 0d07eb85571c2cc79cb6028210775231
+    md5: 4d67df3a8d5c98cb8565c07e42be0b04
+work/atmosphere/INPUT/.git/hooks/update.sample:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/hooks/update.sample
+  hashes:
+    binhash: 22fc467fe45b17f87c7741e61de4161d
+    md5: 647ae13c682f7827c22f5fc08a03674e
+work/atmosphere/INPUT/.git/index:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/index
+  hashes:
+    binhash: 32dbfd30466b16ad3645c62c2e5519e9
+    md5: 885331255c73fe033f18f4fae0cde333
+work/atmosphere/INPUT/.git/info/exclude:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/info/exclude
+  hashes:
+    binhash: 1d74ac405524fa8af7649e3df81f0bca
+    md5: 036208b4a1ab4a235d75c181e685e5a3
+work/atmosphere/INPUT/.git/logs/HEAD:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/logs/HEAD
+  hashes:
+    binhash: d78278400255c5c65565c98e584f1390
+    md5: e388ebd4559b4921957c7f0f0dcc89ea
+work/atmosphere/INPUT/.git/logs/refs/heads/master:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/logs/refs/heads/master
+  hashes:
+    binhash: 25975d17a7c2d85c25c4778807df1592
+    md5: 92679f6d2ba705eec5f8a55e651ae927
+work/atmosphere/INPUT/.git/logs/refs/heads/natalia:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/logs/refs/heads/natalia
+  hashes:
+    binhash: 35152cb4a34c9aea7102d935c87c0bf5
+    md5: 372b527b7d1f38c39933157f7bcdcf56
+work/atmosphere/INPUT/.git/logs/refs/remotes/origin/HEAD:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/logs/refs/remotes/origin/HEAD
+  hashes:
+    binhash: 46b0724eec527371c4f01cd7ecbfad35
+    md5: 92679f6d2ba705eec5f8a55e651ae927
+work/atmosphere/INPUT/.git/logs/refs/remotes/origin/natalia:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/logs/refs/remotes/origin/natalia
+  hashes:
+    binhash: 3f395c9220ca99f96661de1db3905a3a
+    md5: 11a7d7d38d77689be392dd1ab2585277
+work/atmosphere/INPUT/.git/objects/0a/4f4936dcc2e7c4f3530d6dfe1966da8cb46c47:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/objects/0a/4f4936dcc2e7c4f3530d6dfe1966da8cb46c47
+  hashes:
+    binhash: 221595c8406f4c0d559b954337285a39
+    md5: fec6f7f1a7ddc6b53425b310b8203bd8
+work/atmosphere/INPUT/.git/objects/20/91bd1f2ca8d7928f8e796ee0eca994382ad9d9:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/objects/20/91bd1f2ca8d7928f8e796ee0eca994382ad9d9
+  hashes:
+    binhash: 22c2d535f5dcc36e66ba648140513851
+    md5: 2b4505b2df146f297f1290321d049f0a
+work/atmosphere/INPUT/.git/objects/33/88db5c2a15670e4ef1ac4128cd07fc2b390f5b:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/objects/33/88db5c2a15670e4ef1ac4128cd07fc2b390f5b
+  hashes:
+    binhash: a5e91c9f789d75e897b736a0dad9c30b
+    md5: 0d19bebb2900a086b77bebd5f7f9557b
+work/atmosphere/INPUT/.git/objects/44/e3bdd79358906617453a81f17fe9edc87d71b9:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/objects/44/e3bdd79358906617453a81f17fe9edc87d71b9
+  hashes:
+    binhash: 20820dda4af99c6f0598aeb10e8ac1fe
+    md5: c68c7ef1f1581497d45fb57107d447e2
+work/atmosphere/INPUT/.git/objects/53/b981cd1d05aafd9bc981645af5ac02026ad45c:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/objects/53/b981cd1d05aafd9bc981645af5ac02026ad45c
+  hashes:
+    binhash: d81a6ac4e957d123140b6ed5ef117cc5
+    md5: 8fc2a0c0b2801b70db34f61a9666f2dc
+work/atmosphere/INPUT/.git/objects/54/9ccc57e7ccee6fa16d6eb68b326e8253361b74:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/objects/54/9ccc57e7ccee6fa16d6eb68b326e8253361b74
+  hashes:
+    binhash: e818116d3ef9faed31846e2070c80bc5
+    md5: cabdc7c8c17286f9e6a90a5c71e557b3
+work/atmosphere/INPUT/.git/objects/78/b16d80d468524adb4c1d8c6ccb5b22035b6de1:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/objects/78/b16d80d468524adb4c1d8c6ccb5b22035b6de1
+  hashes:
+    binhash: 78087e5dc9413ce8a756e6bbf9997415
+    md5: 51b40236cad6d1c830b03b1915d58d55
+work/atmosphere/INPUT/.git/objects/a3/1ba934748d8f03c571cc6a0501a530b7e33e93:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/objects/a3/1ba934748d8f03c571cc6a0501a530b7e33e93
+  hashes:
+    binhash: 4b21c5bf779413dbd0321b1926484f2b
+    md5: 7e7fcfe65aa279d6eb3811f368b26123
+work/atmosphere/INPUT/.git/objects/b4/ba5033322e621652b09ccf59e5a633a3b76192:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/objects/b4/ba5033322e621652b09ccf59e5a633a3b76192
+  hashes:
+    binhash: 0c558c59d0609503db09f85d497261ba
+    md5: 413a65cdc0e67b614fce22e632ecbffe
+work/atmosphere/INPUT/.git/objects/c9/4857c049f2e91df6bcd8291b1a3ca2840953d4:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/objects/c9/4857c049f2e91df6bcd8291b1a3ca2840953d4
+  hashes:
+    binhash: eb6fc310f0d913eadb70ffbe7e7185b3
+    md5: e7013a3b5750493ab2b6d3867dc31bec
+work/atmosphere/INPUT/.git/objects/d5/4eea9dad07a0fcf0fe51948b19dcb625931717:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/objects/d5/4eea9dad07a0fcf0fe51948b19dcb625931717
+  hashes:
+    binhash: 600ae60e1cb542fcaaaf218c6df5ea6b
+    md5: 03c2d859d25e870044b50d82a08740ce
+work/atmosphere/INPUT/.git/objects/d5/70c14f38281db25fc85a8cbdc4b98e658a8e19:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/objects/d5/70c14f38281db25fc85a8cbdc4b98e658a8e19
+  hashes:
+    binhash: 6838b2e82fc3a475c71560a8f17c8b88
+    md5: 0fe636d138db4ba43d6790680c695e06
+work/atmosphere/INPUT/.git/objects/d5/7580fd328031bf9274fb8b5286757415e7592e:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/objects/d5/7580fd328031bf9274fb8b5286757415e7592e
+  hashes:
+    binhash: fdec35f3a5c1491ac720056c77338246
+    md5: 3c3b51808cfce40d7ec8423e3328010d
+work/atmosphere/INPUT/.git/objects/f7/75c5e7a45aeaa28cf8ca9a3f06071f215b7af8:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/objects/f7/75c5e7a45aeaa28cf8ca9a3f06071f215b7af8
+  hashes:
+    binhash: 9f5edeb5fd41b41fcc011b3c12e2a54f
+    md5: e700c5f0dd8b5b105482409d216c5ec6
+work/atmosphere/INPUT/.git/objects/pack/pack-3292263c30f86e514ed845d2bb6528d1375cb62b.idx:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/objects/pack/pack-3292263c30f86e514ed845d2bb6528d1375cb62b.idx
+  hashes:
+    binhash: a85ec91629d9d56839736703b3b05630
+    md5: 83659df66275276b0b4bc0cf4b838820
+work/atmosphere/INPUT/.git/objects/pack/pack-3292263c30f86e514ed845d2bb6528d1375cb62b.pack:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/objects/pack/pack-3292263c30f86e514ed845d2bb6528d1375cb62b.pack
+  hashes:
+    binhash: a2ecc803d58b2a3d4c964fbd2edf40e4
+    md5: f2ab998b282ab43a22a1598a878ceadb
+work/atmosphere/INPUT/.git/objects/pack/pack-3292263c30f86e514ed845d2bb6528d1375cb62b.rev:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/objects/pack/pack-3292263c30f86e514ed845d2bb6528d1375cb62b.rev
+  hashes:
+    binhash: 6a6c11583a7694e141375df931fb82b5
+    md5: 8a98f6314453c12300688876039da975
+work/atmosphere/INPUT/.git/packed-refs:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/packed-refs
+  hashes:
+    binhash: 017175827865f22ed81f524a3c7bef04
+    md5: a6e960893cbd4c7beddabee35eb58e48
+work/atmosphere/INPUT/.git/refs/heads/master:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/refs/heads/master
+  hashes:
+    binhash: 90f03962eed352127c8f4ce92d735de5
+    md5: e3172694335ec12b3bf5b83d744b444f
+work/atmosphere/INPUT/.git/refs/heads/natalia:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/refs/heads/natalia
+  hashes:
+    binhash: b5f4f3dab0136e3959be30bab3a92f1f
+    md5: b9ec7654dabf432b2d397cd71f5f04ee
+work/atmosphere/INPUT/.git/refs/remotes/origin/HEAD:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/refs/remotes/origin/HEAD
+  hashes:
+    binhash: 6bdff6cc233b3bcc8005a8624e07d2b9
+    md5: 73a00957034783b7b5c8294c54cd3e12
+work/atmosphere/INPUT/.git/refs/remotes/origin/natalia:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.git/refs/remotes/origin/natalia
+  hashes:
+    binhash: 872ecc34f26daee608698a6f1e1769a4
+    md5: b9ec7654dabf432b2d397cd71f5f04ee
+work/atmosphere/INPUT/.ipynb_checkpoints/test_modules-checkpoint.py:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.ipynb_checkpoints/test_modules-checkpoint.py
+  hashes:
+    binhash: 4000a27a4fe9f7aa5c9169daabb76626
+    md5: 83e4a71438a2d6479eba22006a6cdf72
+work/atmosphere/INPUT/.ipynb_checkpoints/testing_ryf-checkpoint.ipynb:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/.ipynb_checkpoints/testing_ryf-checkpoint.ipynb
+  hashes:
+    binhash: 25bed0f2cbeee07d1f6746ee8b4f8c03
+    md5: bc11871efc647e0ddf5d3b7111bb6d77
+work/atmosphere/INPUT/README.md:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/README.md
+  hashes:
+    binhash: b4bf6b043a543edc7a62b8d5458e9449
+    md5: eae04f9e8257fc0a0ed610dc756a48b1
 work/atmosphere/INPUT/RYF.friver.1990_1991.nc:
-  fullpath: /g/data/vk83/experiments/inputs/JRA-55/RYF/v1-4/data/RYF.friver.1990_1991.nc
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/RYF.friver.1990_1991.nc
   hashes:
-    binhash: df5b6715e020f563acb65673571a565f
-    md5: fa3a55aeb6706a1b422d096f61a772c1
+    binhash: b50de313b724f76872637ba5b2a8cd60
+    md5: 217cc1d5e7d94feb0c084037c4effb51
 work/atmosphere/INPUT/RYF.huss.1990_1991.nc:
-  fullpath: /g/data/vk83/experiments/inputs/JRA-55/RYF/v1-4/data/RYF.huss.1990_1991.nc
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/RYF.huss.1990_1991.nc
   hashes:
-    binhash: 71d6099511ebc8b43f9b86b325ecf3af
-    md5: 6032d514fdfdd2b6a84bdef0a4ac3afe
+    binhash: 6be72ad9abc82a3250568d7701b6e90e
+    md5: 9812557a0dc79223319827c577c35c11
 work/atmosphere/INPUT/RYF.licalvf.1990_1991.nc:
-  fullpath: /g/data/vk83/experiments/inputs/JRA-55/RYF/v1-4/data/RYF.licalvf.1990_1991.nc
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/RYF.licalvf.1990_1991.nc
   hashes:
-    binhash: f219ce98f3fcbe6f8ec517740f01aee1
-    md5: 6f927702cbc023cc20d3ddd69695f0a0
+    binhash: d7f1ead2698e1fc6853d072d3d08d4ac
+    md5: 54797916b45341466c9d6fabe3e28fa6
 work/atmosphere/INPUT/RYF.prra.1990_1991.nc:
-  fullpath: /g/data/vk83/experiments/inputs/JRA-55/RYF/v1-4/data/RYF.prra.1990_1991.nc
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/RYF.prra.1990_1991.nc
   hashes:
-    binhash: 2754bd49fff02bf5330a086310f1c296
-    md5: ac199086106ec4e41506e6082bccb109
+    binhash: a7927b17ef03c63639589ebdca86ce22
+    md5: 8bb3179947b8d7a9aa8c2a73319b9e45
 work/atmosphere/INPUT/RYF.prsn.1990_1991.nc:
-  fullpath: /g/data/vk83/experiments/inputs/JRA-55/RYF/v1-4/data/RYF.prsn.1990_1991.nc
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/RYF.prsn.1990_1991.nc
   hashes:
-    binhash: 154a15cde4940309ac5e6fef0d7faba4
-    md5: cd076c877c2c5df61615e04d71ed00e0
+    binhash: 6da8c035a590eb237b6ab32be73317c5
+    md5: 054fad4bc6d8676fd426666457846dcc
 work/atmosphere/INPUT/RYF.psl.1990_1991.nc:
-  fullpath: /g/data/vk83/experiments/inputs/JRA-55/RYF/v1-4/data/RYF.psl.1990_1991.nc
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/RYF.psl.1990_1991.nc
   hashes:
-    binhash: 559b1e3183475cfb94a7f013f4acf8ea
-    md5: 0dfd94a5c3234fd2016dfdd01e84a170
-work/atmosphere/INPUT/RYF.rhuss.1990_1991.nc:
-  fullpath: /g/data/vk83/experiments/inputs/JRA-55/RYF/v1-4/data/RYF.rhuss.1990_1991.nc
-  hashes:
-    binhash: 1f70c237032f7368e6f2478d2a678c99
-    md5: 632519955305cb5c19e286b151439fb5
+    binhash: f232e01625e3dbb2c572c2dfdf549389
+    md5: d6c4bdaa9dcdaf7b78bf663903a49b22
 work/atmosphere/INPUT/RYF.rlds.1990_1991.nc:
-  fullpath: /g/data/vk83/experiments/inputs/JRA-55/RYF/v1-4/data/RYF.rlds.1990_1991.nc
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/RYF.rlds.1990_1991.nc
   hashes:
-    binhash: 9512836673a68507bed403ecd859ba38
-    md5: 0ea83e107ec883c3f39a12b60ff50d8e
+    binhash: 23d4d18003eb72e70a08c594d582eaa6
+    md5: c1abbe15a180292c6c23dda642003d0c
 work/atmosphere/INPUT/RYF.rsds.1990_1991.nc:
-  fullpath: /g/data/vk83/experiments/inputs/JRA-55/RYF/v1-4/data/RYF.rsds.1990_1991.nc
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/RYF.rsds.1990_1991.nc
   hashes:
-    binhash: 7ff7cd79ace33fefe2b9a91ea018ea14
-    md5: b74bf123f1e4557368a61732cf24f1c2
+    binhash: 528db52489d6ed1ad5961c65a4d76b30
+    md5: 52de84634c998064823862ad28cd5414
 work/atmosphere/INPUT/RYF.tas.1990_1991.nc:
-  fullpath: /g/data/vk83/experiments/inputs/JRA-55/RYF/v1-4/data/RYF.tas.1990_1991.nc
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/RYF.tas.1990_1991.nc
   hashes:
-    binhash: 8f3c6798cc92a1d0b6573eb44b2a4dd2
-    md5: 06689885f4f2f726b95a2818ab78a20d
+    binhash: bf1f90d94f585e2540f28abf38127d2f
+    md5: e17b73ae0fd23bef71479cc24dae09f4
 work/atmosphere/INPUT/RYF.uas.1990_1991.nc:
-  fullpath: /g/data/vk83/experiments/inputs/JRA-55/RYF/v1-4/data/RYF.uas.1990_1991.nc
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/RYF.uas.1990_1991.nc
   hashes:
-    binhash: 54ede2172bf85bc861bc64c296a03f8c
-    md5: 107bf9480f55597655d2d283b6f6b4ff
+    binhash: 713707f5586082ddb01201f20dfe9836
+    md5: 0b925eb4023d96fdde34692473a139e2
 work/atmosphere/INPUT/RYF.vas.1990_1991.nc:
-  fullpath: /g/data/vk83/experiments/inputs/JRA-55/RYF/v1-4/data/RYF.vas.1990_1991.nc
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/RYF.vas.1990_1991.nc
   hashes:
-    binhash: 17224eecb745b6ce72604b41201c1fe7
-    md5: 88dc8c70338bbc8f5efc48ed0009a99f
+    binhash: 2b18c3e5f083ea2218a15bf24e3f3b70
+    md5: f9596dac895694b0405844b7f3f35c0f
+work/atmosphere/INPUT/make_ryf.ipynb:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/make_ryf.ipynb
+  hashes:
+    binhash: a13c693a9a44476c10d2b7ce21a59f0f
+    md5: c660c68400feb3c8ad50a66455612088
 work/atmosphere/INPUT/rmp_jrar_to_cict_CONSERV.nc:
-  fullpath: /g/data/vk83/experiments/inputs/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/rmp_jrar_to_cict_CONSERV.nc
+  fullpath: /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/rmp_jrar_to_cict_CONSERV.nc
   hashes:
-    binhash: d7b11ae77fba63aecab0892891135a1f
+    binhash: aff6cffdee955ee057264ffe7f38c0f4
     md5: 10f0b5ea6b8102a03ad1140e5163a0f7
+work/atmosphere/INPUT/test_modules.py:
+  fullpath: /leonardo/home/userexternal/ntilinin/make_ryf/test_modules.py
+  hashes:
+    binhash: 132b7e2fbc92590a5c91cdb419e44564
+    md5: 83e4a71438a2d6479eba22006a6cdf72
 work/ice/RESTART/grid.nc:
   copy: true
-  fullpath: /g/data/vk83/experiments/inputs/access-om2/ice/grids/global.1deg/2020.05.30/grid.nc
+  fullpath: /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/grids/global.1deg/2020.05.30/grid.nc
   hashes:
-    binhash: e7108317ae28b1f9ae77711728925cb6
+    binhash: 844f8b19d06d11799433843b2c6d47f8
     md5: 1213e346055ee073fe33dc12578d99c6
 work/ice/RESTART/i2o.nc:
   copy: true
-  fullpath: /g/data/vk83/experiments/inputs/access-om2/ice/initial_conditions/global.1deg/2020.05.30/i2o.nc
+  fullpath: /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/i2o.nc
   hashes:
-    binhash: 527d494c80b2a3418645b962fd8706d0
+    binhash: 3ed581cd04ee88182b4531bebd319175
     md5: c96e06c3c80c0f680545db59ed3349e5
 work/ice/RESTART/kmt.nc:
   copy: true
-  fullpath: /g/data/vk83/experiments/inputs/access-om2/ice/grids/global.1deg/2020.10.22/kmt.nc
+  fullpath: /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/grids/global.1deg/2020.10.22/kmt.nc
   hashes:
-    binhash: 13a23d6d9331abc9d677c6fd466a4433
+    binhash: f65a968dca12b94d17a405c71e77b984
     md5: 1f9806c646a620378e5257e480bc9df7
 work/ice/RESTART/monthly_sstsss.nc:
   copy: true
-  fullpath: /g/data/vk83/experiments/inputs/access-om2/ice/initial_conditions/global.1deg/2020.05.30/monthly_sstsss.nc
+  fullpath: /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/monthly_sstsss.nc
   hashes:
-    binhash: 66f44d84fada351d4ebf05f196762d8c
+    binhash: d6d1f41e4c71df43168c5a16ac9f60eb
     md5: 323d4c605f83f4d7d3126da70153c2ed
 work/ice/RESTART/o2i.nc:
   copy: true
-  fullpath: /g/data/vk83/experiments/inputs/access-om2/ice/initial_conditions/global.1deg/2020.05.30/o2i.nc
+  fullpath: /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/o2i.nc
   hashes:
-    binhash: 56f258e931a8eda2fc42b3a315d485eb
+    binhash: ecf9f7402ea529ff70a1fc4efe4c7b79
     md5: 3498246dcd7da40d3b8c6b4a908b260f
 work/ice/RESTART/u_star.nc:
   copy: true
-  fullpath: /g/data/vk83/experiments/inputs/access-om2/ice/initial_conditions/global.1deg/2020.05.30/u_star.nc
+  fullpath: /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/u_star.nc
   hashes:
-    binhash: f93a19930c5c59e03751e70a123ab01f
+    binhash: 6aac2c3a14e660f99a3112f9845f8219
     md5: 68cf0ef92576f96ef085cd7f243d0c39
 work/ocean/INPUT/chl.nc:
-  fullpath: /g/data/vk83/experiments/inputs/access-om2/ocean/chlorophyll/global.1deg/2020.05.30/chl.nc
+  fullpath: /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/chlorophyll/global.1deg/2020.05.30/chl.nc
   hashes:
-    binhash: 05b3313121bbb9825a20f0fb58901b21
+    binhash: 6881959bcce6fbb41e75fe6dd9330eea
     md5: a7aa5bcf4a3b9fa8102edd3b6b67c3a2
 work/ocean/INPUT/grid_spec.nc:
-  fullpath: /g/data/vk83/experiments/inputs/access-om2/ocean/grids/mosaic/global.1deg/2020.05.30/grid_spec.nc
+  fullpath: /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/grids/mosaic/global.1deg/2020.05.30/grid_spec.nc
   hashes:
-    binhash: 587ca8eb0cbc978232fe55a7bff054c9
+    binhash: 5c53e8b076aed38aa11a857300d658ac
     md5: 027d2f8fb1eda3ef1cf0a3f520a217f7
 work/ocean/INPUT/ocean_hgrid.nc:
-  fullpath: /g/data/vk83/experiments/inputs/access-om2/ocean/grids/mosaic/global.1deg/2020.05.30/ocean_hgrid.nc
+  fullpath: /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/grids/mosaic/global.1deg/2020.05.30/ocean_hgrid.nc
   hashes:
-    binhash: 87d66edc0ef57c97b758a3049bfe8a14
+    binhash: 3110958f420e7cb0c445aefb1efff2a5
     md5: 51f58be0f4ea6da2cb438a893f95c689
 work/ocean/INPUT/ocean_mask.nc:
-  fullpath: /g/data/vk83/experiments/inputs/access-om2/ocean/grids/bathymetry/global.1deg/2020.10.22/ocean_mask.nc
+  fullpath: /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/grids/bathymetry/global.1deg/2020.10.22/ocean_mask.nc
   hashes:
-    binhash: ab10098b71d76ba5fcf0ea9e007a90e5
+    binhash: 5018db40c97fbebd1f4a2f342e3ff4a4
     md5: 411567441c64bcfa814259736c5ed1a3
 work/ocean/INPUT/ocean_mask_table:
-  fullpath: /g/data/vk83/experiments/inputs/access-om2/ocean/processor_masks/global.1deg/216.16x15/2020.05.30/ocean_mask_table
+  fullpath: /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/processor_masks/global.1deg/216.16x15/2020.05.30/ocean_mask_table
   hashes:
-    binhash: dc68931f1bb40bcd75a98d209b47d4c4
+    binhash: b027524ba8baf6802cb495fb4fddcce7
     md5: 2203b38758fb2b56a145ef16b7872af9
 work/ocean/INPUT/ocean_mosaic.nc:
-  fullpath: /g/data/vk83/experiments/inputs/access-om2/ocean/grids/mosaic/global.1deg/2020.05.30/ocean_mosaic.nc
+  fullpath: /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/grids/mosaic/global.1deg/2020.05.30/ocean_mosaic.nc
   hashes:
-    binhash: 6aadd388078defe3f80df6f3de77b4bd
+    binhash: a6aaa3e56388a565631be54b475ec8bb
     md5: cb42e630ee31d3686156fcbdc2f9d07c
 work/ocean/INPUT/ocean_temp_salt.res.nc:
-  fullpath: /g/data/vk83/experiments/inputs/access-om2/ocean/initial_conditions/global.1deg/2020.10.22/ocean_temp_salt.res.nc
+  fullpath: /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/initial_conditions/global.1deg/2020.10.22/ocean_temp_salt.res.nc
   hashes:
-    binhash: 1530c856cbbc9b5073bdf3e7beb72cd7
+    binhash: 244ac8968213bb9ad20fcc86be28ba16
     md5: c5f7e60b5427a4442f111adc65a2d067
 work/ocean/INPUT/ocean_vgrid.nc:
-  fullpath: /g/data/vk83/experiments/inputs/access-om2/ocean/grids/vertical/global.1deg/2020.10.22/ocean_vgrid.nc
+  fullpath: /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/grids/vertical/global.1deg/2020.10.22/ocean_vgrid.nc
   hashes:
-    binhash: cd9ef67b8cf6d4ea0c78554ac38e1bc3
+    binhash: 5daca9c667bff6e6a6d66eb8103d65aa
     md5: 339ff716e3019a86fc861498e674250a
 work/ocean/INPUT/roughness_amp.nc:
-  fullpath: /g/data/vk83/experiments/inputs/access-om2/ocean/tides/global.1deg/2020.05.30/roughness_amp.nc
+  fullpath: /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/tides/global.1deg/2020.05.30/roughness_amp.nc
   hashes:
-    binhash: 73a425be9e5cf7a3d349d75a8ebeadd1
+    binhash: 2a7ea777f1e504b916dd068eaea57195
     md5: 185dadeb53da2de75b47c53fd7085f89
 work/ocean/INPUT/roughness_cdbot.nc:
-  fullpath: /g/data/vk83/experiments/inputs/access-om2/ocean/tides/global.1deg/2020.05.30/roughness_cdbot.nc
+  fullpath: /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/tides/global.1deg/2020.05.30/roughness_cdbot.nc
   hashes:
-    binhash: 4ec236c3874fbd4dc5c2fcdec271f557
+    binhash: d07e11f731638c111ceeb1e84500c430
     md5: b50f0595f3ebc872cbcf5f3223115643
 work/ocean/INPUT/salt_sfc_restore.nc:
-  fullpath: /g/data/vk83/experiments/inputs/access-om2/ocean/surface_salt_restoring/global.1deg/2020.05.30/salt_sfc_restore.nc
+  fullpath: /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/surface_salt_restoring/global.1deg/2020.05.30/salt_sfc_restore.nc
   hashes:
-    binhash: 13101e8424f559b6c172ef86d85b9a8f
+    binhash: 91d0773f9e4432b94d35b264b873cd91
     md5: b2bd35c44017597ba99b85fb61ed4d72
 work/ocean/INPUT/tideamp.nc:
-  fullpath: /g/data/vk83/experiments/inputs/access-om2/ocean/tides/global.1deg/2020.05.30/tideamp.nc
+  fullpath: /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/tides/global.1deg/2020.05.30/tideamp.nc
   hashes:
-    binhash: 0226a494f8a03f8fb9845060cb694389
+    binhash: af8b3ab208203f20983e6abdbf597a41
     md5: b2840af757d9b7b40207f33f1fc84c5c
 work/ocean/INPUT/topog.nc:
-  fullpath: /g/data/vk83/experiments/inputs/access-om2/ocean/grids/bathymetry/global.1deg/2020.10.22/topog.nc
+  fullpath: /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/grids/bathymetry/global.1deg/2020.10.22/topog.nc
   hashes:
-    binhash: 8ab65e521a588943b533b188a619d361
+    binhash: 838f85390cb38ba040d4eddeb12db402
     md5: 4e13d88001b646f3cf4f1c3b8db59f91
