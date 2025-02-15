@@ -13,7 +13,7 @@ walltime: 00:03:00
 jobname: 1deg_jra55_ryf
 mem: 1000GB
 ncpus: 32
-nnodes: 1
+nnodes: 4
 runspersub: 1
 
 modules:
