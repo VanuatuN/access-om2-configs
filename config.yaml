@@ -89,7 +89,7 @@ collate:
   restart: true
   walltime: 00:03:00
   mem: 30GB
-  ncpus: 32
+  ncpus: 1
   nnodes: 1
   npernode: 32
 #  queue: normal
