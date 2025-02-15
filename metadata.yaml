@@ -1,6 +1,6 @@
 contact: Add your name here
 email: Add your email address here
-created: '2025-02-14'
+created: '2025-02-15'
 description: "1 degree ACCESS-OM2 global model configuration under the RYF9091 Repeat\n
   Year Forcing strategy outlined by Stewart et al. (2020), \nhttps://doi.org/10.1016/j.ocemod.2019.101557.\n
   The configuration is based on that described in Kiss et al. (2020),\nhttps://doi.org/10.5194/gmd-13-401-2020,
@@ -32,8 +32,8 @@ license: CC-BY-4.0
 model: ACCESS-OM2
 version: '2.0'
 url: https://github.com/ACCESS-NRI/access-om2-configs
-experiment_uuid: 3216c7cb-794d-4ba2-964f-3692dbb01156
-name: 1deg_jra55_ryf-expt-3216c7cb
+experiment_uuid: a3822e12-4294-48c8-9997-8e2db1650e4e
+name: 1deg_jra55_ryf-expt-a3822e12
 schema_version:  # The version of the schema (string)
 long_description: # Long description of the experiment (string)
 frequency: # The frequency(/ies) included in the experiment (string)
