@@ -12,9 +12,9 @@ scheduler: slurm
 walltime: 00:03:00
 jobname: 1deg_jra55_ryf
 mem: 1000GB
-# ncpus: 320
-# nnodes: 10
-# npernode: 32
+ncpus: 32
+nnodes: 1
+#npernode: 32
 
 
 modules:
@@ -49,9 +49,9 @@ submodels:
       input:
             - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/rmp_jrar_to_cict_CONSERV.nc
             - /leonardo/home/userexternal/ntilinin/make_ryf
-      ncpus: 1
-      nnodes: 1
-      npernode: 32    
+      #ncpus: 1
+      #nnodes: 1
+      npernode: 1    
 
     - name: ocean
       model: mom
@@ -70,9 +70,9 @@ submodels:
           - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/tides/global.1deg/2020.05.30/roughness_amp.nc
           - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/tides/global.1deg/2020.05.30/roughness_cdbot.nc
           - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/surface_salt_restoring/global.1deg/2020.05.30/salt_sfc_restore.nc
-      ncpus: 12
-      nnodes: 1
-      npernode: 32
+      #ncpus: 12
+      #nnodes: 1
+      npernode: 20
 
 
     - name: ice
@@ -85,18 +85,18 @@ submodels:
         - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/o2i.nc
         - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/u_star.nc
         - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/monthly_sstsss.nc
-      ncpus: 10
-      nnodes: 1
-      npernode: 32
+      #ncpus: 10
+      #nnodes: 1
+      npernode: 6
 
 # Collation
 collate:
   restart: true
   walltime: 00:03:00
   mem: 30GB
-  ncpus: 4
-  nnodes: 1
-  npernode: 32
+  #ncpus: 4
+  #nnodes: 1
+  npernode: 2
 #  queue: normal
   exe: /leonardo_scratch/large/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/mom5-master-xpemflbdqur3nlgvx64dq4635vpq65yz/bin/mppnccombine.spack
 
