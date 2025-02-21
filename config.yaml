@@ -9,7 +9,7 @@
 
 scheduler: slurm
 #queue: normal
-walltime: 1-00:00:00
+walltime: 00:05:00
 jobname: 1deg_jra55_ryf
 mem: 1000GB
 ncpus: 320
@@ -19,14 +19,15 @@ npernode: 32
 
 modules:
   use:
-      - /leonardo_scratch/large/userexternal/ntilinin/ACCESS-NRI/release/modules
+      - /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/modules
   load:
-      - access-om2
-      - intel-oneapi-compilers/2021.2.0
-      - mom5
-      - netcdf-c/4.7.4 
-      - netcdf-fortran/4.5.2
-
+      - access-om2/access-om2-lmgfria
+      - intel-oneapi-compilers/2021.2.0-xhgnqpv
+#      - mom5
+      - netcdf-c/4.7.4-i3xnywb
+      - netcdf-fortran/4.5.2-6aak3sc
+      - openmpi/4.1.4-z72sfno
+      - parallelio/2.5.2-7dpmxg3
 # Sync options for automatically copying data from ephemeral scratch space to 
 # longer term storage
 sync:
@@ -45,7 +46,7 @@ input:
 submodels:
     - name: atmosphere
       model: yatm
-      exe: /leonardo_scratch/large/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/libaccessom2-master-tqkpbd6z5fimuedszsnqmd3w627x7elu/bin/yatm.exe
+      exe: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/libaccessom2-access-om2-shkjnrowt2akfatdybsizrujxwfnam7f/bin/yatm.exe
       input:
             - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/rmp_jrar_to_cict_CONSERV.nc
             - /leonardo/home/userexternal/ntilinin/make_ryf
@@ -55,7 +56,7 @@ submodels:
 
     - name: ocean
       model: mom
-      exe: /leonardo_scratch/large/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/mom5-master-xpemflbdqur3nlgvx64dq4635vpq65yz/bin/fms_ACCESS-OM.x
+      exe: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/mom5-access-om2-bkjgbganje2ypawu2td25fk5eyfwi3ea/bin/fms_ACCESS-OM.x
       input:
           - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/grids/mosaic/global.1deg/2020.05.30/grid_spec.nc
           - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/grids/mosaic/global.1deg/2020.05.30/ocean_hgrid.nc
@@ -77,7 +78,7 @@ submodels:
 
     - name: ice
       model: cice5
-      exe: /leonardo_scratch/large/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/cice5-master-2cqzrfobwphbj27loirf6plzpbrbtlmn/bin/cice_auscom_360x300_24x1_24p.exe
+      exe: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/cice5-access-om2-ibzshgj256fxgkuxkqavttdzq3txzc7h/bin/cice_auscom_360x300_24x1_24p.exe
       input:
         - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/grids/global.1deg/2020.05.30/grid.nc
         - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/grids/global.1deg/2020.10.22/kmt.nc
@@ -98,13 +99,13 @@ collate:
   nnodes: 1
   npernode: 32
 #  queue: normal
-  exe: /leonardo_scratch/large/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/mom5-master-xpemflbdqur3nlgvx64dq4635vpq65yz/bin/mppnccombine.spack
+  exe: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/mom5-access-om2-bkjgbganje2ypawu2td25fk5eyfwi3ea/bin/mppnccombine.spack
 
 # Misc
 runlog: true
 stacksize: unlimited
 restart_freq: 5YS
-mpirun: --mca io ompio --mca io_ompio_num_aggregators 1 --oversubscribe
+mpirun: --mca io ompio --mca io_ompio_num_aggregators 1 
 qsub_flags: -W umask=027
 env:
     UCX_LOG_LEVEL: 'error'
@@ -122,3 +123,4 @@ userscripts:
     error: tools/resub.sh
     run: rm -f resubmit.count
     sync: /leonardo_scratch/large/userexternal/ntilinin/om2-scripts/concatenate_ice/concat_ice_daily.sh
+ 
