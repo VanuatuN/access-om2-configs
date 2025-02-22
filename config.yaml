@@ -15,6 +15,7 @@ mem: 1000GB
 # ncpus: 32
 # nnodes: 1
 # npernode: 32
+partition: dcgp_usr_prod
 
 
 modules:
@@ -104,7 +105,8 @@ collate:
 runlog: true
 stacksize: unlimited
 restart_freq: 5YS
-mpirun: --mca io ompio --mca io_ompio_num_aggregators 1 
+#mpirun: --mca io ompio --mca io_ompio_num_aggregators 1 
+mpirun: --mca btl_tcp_if_exclude virbr0,lo
 qsub_flags: -W umask=027
 env:
     UCX_LOG_LEVEL: 'error'
