@@ -15,8 +15,8 @@ mem: 1000GB
 account: ICT23_ESP_1
 partition: dcgp_usr_prod
 #project: ICT23_ESP_1
-ncpus: 1344
-nnodes: 12
+ncpus: 560
+nnodes: 5
 npernode: 112
 # # partition: dcgp_usr_prod
 
@@ -77,8 +77,8 @@ submodels:
           - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/tides/global.1deg/2020.05.30/roughness_amp.nc
           - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/tides/global.1deg/2020.05.30/roughness_cdbot.nc
           - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/surface_salt_restoring/global.1deg/2020.05.30/salt_sfc_restore.nc
-      ncpus: 896
-      nnodes: 8
+      ncpus: 336
+      nnodes: 3
       npernode: 112  
       partition: dcgp_usr_prod
 
@@ -94,8 +94,8 @@ submodels:
         - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/o2i.nc
         - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/u_star.nc
         - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/monthly_sstsss.nc
-      ncpus: 448
-      nnodes: 4
+      ncpus: 112
+      nnodes: 1
       npernode: 112  
       partition: dcgp_usr_prod
      
@@ -103,11 +103,11 @@ submodels:
 # Collation
 collate:
   restart: true
-  walltime: 05:00:00
+  walltime: 1-00:00:00
   mem: 30GB
-  ncpus: 448
-  nnodes: 4
-  npernode: 112
+  ncpus: 4
+  # nnodes: 1
+  # npernode: 56
   partition: dcgp_usr_prod
 
 #  queue: normal
