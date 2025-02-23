@@ -16,7 +16,7 @@ account: ICT23_ESP_1
 partition: dcgp_usr_prod
 #project: ICT23_ESP_1
 # ncpus: 280
-# nnodes: 5
+nnodes: 5
 # npernode: 56
 # # partition: dcgp_usr_prod
 
@@ -54,7 +54,7 @@ submodels:
             - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/rmp_jrar_to_cict_CONSERV.nc
             - /leonardo/home/userexternal/ntilinin/make_ryf
       ncpus: 1
-      # nnodes: 1
+      nnodes: 1
       # npernode: 1    
       partition: dcgp_usr_prod
 
@@ -77,8 +77,8 @@ submodels:
           - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/tides/global.1deg/2020.05.30/roughness_amp.nc
           - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/tides/global.1deg/2020.05.30/roughness_cdbot.nc
           - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/surface_salt_restoring/global.1deg/2020.05.30/salt_sfc_restore.nc
-      ncpus: 216
-      # nnodes: 2
+      ncpus: 336
+      nnodes: 3
       # npernode: 56  
       partition: dcgp_usr_prod
 
@@ -94,8 +94,8 @@ submodels:
         - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/o2i.nc
         - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/u_star.nc
         - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/monthly_sstsss.nc
-      ncpus: 24
-      # nnodes: 1
+      ncpus: 112
+      nnodes: 1
       # npernode: 56  
       partition: dcgp_usr_prod
      
