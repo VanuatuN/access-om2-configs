@@ -12,7 +12,9 @@ scheduler: slurm
 walltime: 00:05:00
 jobname: 1deg_jra55_ryf
 mem: 1000GB
-project: ICT23_ESP_1
+account: ICT23_ESP_1
+partition: dcgp_usr_prod
+#project: ICT23_ESP_1
 # ncpus: 280
 # nnodes: 5
 # npernode: 56
@@ -56,6 +58,8 @@ submodels:
       # npernode: 1    
       partition: dcgp_usr_prod
 
+      
+
     - name: ocean
       model: mom
       exe: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/mom5-access-om2-bkjgbganje2ypawu2td25fk5eyfwi3ea/bin/fms_ACCESS-OM.x
@@ -79,6 +83,7 @@ submodels:
       partition: dcgp_usr_prod
 
 
+
     - name: ice
       model: cice5
       exe: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/cice5-access-om2-ibzshgj256fxgkuxkqavttdzq3txzc7h/bin/cice_auscom_360x300_24x1_24p.exe
@@ -93,6 +98,7 @@ submodels:
       # nnodes: 1
       # npernode: 56  
       partition: dcgp_usr_prod
+     
 
 # Collation
 collate:
@@ -103,6 +109,7 @@ collate:
   # nnodes: 1
   # npernode: 56
   partition: dcgp_usr_prod
+
 #  queue: normal
   exe: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/mom5-access-om2-bkjgbganje2ypawu2td25fk5eyfwi3ea/bin/mppnccombine.spack
 
