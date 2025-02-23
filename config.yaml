@@ -9,7 +9,7 @@
 
 scheduler: slurm
 #queue: dcgp_usr_prod
-walltime: 00:05:00
+walltime: 00:30:00
 jobname: 1deg_jra55_ryf
 mem: 1000GB
 account: ICT23_ESP_1
