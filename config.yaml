@@ -15,9 +15,9 @@ mem: 1000GB
 account: ICT23_ESP_1
 partition: dcgp_usr_prod
 #project: ICT23_ESP_1
-# ncpus: 280
+ncpus: 560
 nnodes: 5
-# npernode: 56
+npernode: 112
 # # partition: dcgp_usr_prod
 
 
@@ -53,9 +53,9 @@ submodels:
       input:
             - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/rmp_jrar_to_cict_CONSERV.nc
             - /leonardo/home/userexternal/ntilinin/make_ryf
-      ncpus: 1
+      ncpus: 112
       nnodes: 1
-      # npernode: 1    
+      npernode: 112  
       partition: dcgp_usr_prod
 
       
@@ -79,7 +79,7 @@ submodels:
           - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/surface_salt_restoring/global.1deg/2020.05.30/salt_sfc_restore.nc
       ncpus: 336
       nnodes: 3
-      # npernode: 56  
+      npernode: 112  
       partition: dcgp_usr_prod
 
 
@@ -96,7 +96,7 @@ submodels:
         - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/monthly_sstsss.nc
       ncpus: 112
       nnodes: 1
-      # npernode: 56  
+      npernode: 112  
       partition: dcgp_usr_prod
      
 
