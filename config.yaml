@@ -1,4 +1,4 @@
-# PBS configuration
+# PBS/SLURM configuration
 
 # If submitting to a different project to your default, uncomment line below
 # and replace PROJECT_CODE with appropriate code. This may require setting shortpath
@@ -8,17 +8,17 @@
 # shortpath: /scratch/PROJECT_CODE
 
 scheduler: slurm
-#queue: dcgp_usr_prod
-walltime: 05:00:00
+#queue: do not set for slurm
+walltime: 09:00:00
 jobname: 1deg_jra55_ryf
 mem: 1000GB
 account: ICT23_ESP_1
 partition: dcgp_usr_prod
-#project: ICT23_ESP_1
+#project: do not set for slurm, creates separate folder 
 ncpus: 560
 nnodes: 5
 npernode: 112
-# # partition: dcgp_usr_prod
+
 
 
 modules:
