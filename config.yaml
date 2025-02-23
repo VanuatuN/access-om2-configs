@@ -15,9 +15,14 @@ mem: 1000GB
 account: ICT23_ESP_1
 partition: dcgp_usr_prod
 #project: ICT23_ESP_1
-ncpus: 560
-nnodes: 5
+#ncpus: 560
+#nnodes: 5
+#npernode: 112
+
+ncpus: 112
+nnodes: 1
 npernode: 112
+
 # # partition: dcgp_usr_prod
 
 
@@ -53,9 +58,12 @@ submodels:
       input:
             - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/rmp_jrar_to_cict_CONSERV.nc
             - /leonardo/home/userexternal/ntilinin/make_ryf
-      ncpus: 112
+      # ncpus: 112
+      # nnodes: 1
+      # npernode: 112  
+      ncpus: 1
       nnodes: 1
-      npernode: 112  
+      npernode: 112
       partition: dcgp_usr_prod
 
       
@@ -77,9 +85,12 @@ submodels:
           - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/tides/global.1deg/2020.05.30/roughness_amp.nc
           - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/tides/global.1deg/2020.05.30/roughness_cdbot.nc
           - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/surface_salt_restoring/global.1deg/2020.05.30/salt_sfc_restore.nc
-      ncpus: 336
-      nnodes: 3
-      npernode: 112  
+      # ncpus: 336
+      # nnodes: 3
+      # npernode: 112 
+      ncpus: 100
+      nnodes: 1
+      npernode: 112 
       partition: dcgp_usr_prod
 
 
@@ -94,9 +105,12 @@ submodels:
         - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/o2i.nc
         - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/u_star.nc
         - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/monthly_sstsss.nc
-      ncpus: 112
+      # ncpus: 112
+      # nnodes: 1
+      # npernode: 112  
+      ncpus: 11
       nnodes: 1
-      npernode: 112  
+      npernode: 112
       partition: dcgp_usr_prod
      
 
@@ -105,7 +119,7 @@ collate:
   restart: true
   walltime: 1-00:00:00
   mem: 30GB
-  ncpus: 4
+  ncpus: 1
   # nnodes: 1
   # npernode: 56
   partition: dcgp_usr_prod
@@ -120,7 +134,7 @@ restart_freq: 5YS
 mpirun: --mca io ompio --mca io_ompio_num_aggregators 1 
 #mpirun: --mca btl_tcp_if_exclude virbr0,lo
 #mpirun: 
-qsub_flags: -W umask=027
+# qsub_flags: -W umask=027
 env:
     UCX_LOG_LEVEL: 'error'
 
