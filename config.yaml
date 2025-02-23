@@ -8,14 +8,15 @@
 # shortpath: /scratch/PROJECT_CODE
 
 scheduler: slurm
-#queue: normal
+#queue: dcgp_usr_prod
 walltime: 00:05:00
 jobname: 1deg_jra55_ryf
 mem: 1000GB
-# ncpus: 32
-# nnodes: 1
-# npernode: 32
-# partition: dcgp_usr_prod
+project: ICT23_ESP_1
+# ncpus: 280
+# nnodes: 5
+# npernode: 56
+# # partition: dcgp_usr_prod
 
 
 modules:
@@ -51,8 +52,8 @@ submodels:
             - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/rmp_jrar_to_cict_CONSERV.nc
             - /leonardo/home/userexternal/ntilinin/make_ryf
       ncpus: 1
-      nnodes: 1
-      npernode: 1    
+      # nnodes: 1
+      # npernode: 1    
       partition: dcgp_usr_prod
 
     - name: ocean
@@ -72,9 +73,9 @@ submodels:
           - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/tides/global.1deg/2020.05.30/roughness_amp.nc
           - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/tides/global.1deg/2020.05.30/roughness_cdbot.nc
           - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/surface_salt_restoring/global.1deg/2020.05.30/salt_sfc_restore.nc
-      ncpus: 112
-      nnodes: 2
-      npernode: 56  
+      ncpus: 216
+      # nnodes: 2
+      # npernode: 56  
       partition: dcgp_usr_prod
 
 
@@ -88,9 +89,9 @@ submodels:
         - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/o2i.nc
         - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/u_star.nc
         - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/monthly_sstsss.nc
-      ncpus: 56
-      nnodes: 1
-      npernode: 56  
+      ncpus: 24
+      # nnodes: 1
+      # npernode: 56  
       partition: dcgp_usr_prod
 
 # Collation
@@ -98,9 +99,9 @@ collate:
   restart: true
   walltime: 1-00:00:00
   mem: 30GB
-  ncpus: 56
-  nnodes: 1
-  npernode: 56
+  ncpus: 4
+  # nnodes: 1
+  # npernode: 56
   partition: dcgp_usr_prod
 #  queue: normal
   exe: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/mom5-access-om2-bkjgbganje2ypawu2td25fk5eyfwi3ea/bin/mppnccombine.spack
@@ -109,8 +110,9 @@ collate:
 runlog: true
 stacksize: unlimited
 restart_freq: 5YS
-#mpirun: --mca io ompio --mca io_ompio_num_aggregators 1 
-mpirun: --mca btl_tcp_if_exclude virbr0,lo
+mpirun: --mca io ompio --mca io_ompio_num_aggregators 1 
+#mpirun: --mca btl_tcp_if_exclude virbr0,lo
+#mpirun: 
 qsub_flags: -W umask=027
 env:
     UCX_LOG_LEVEL: 'error'
@@ -119,9 +121,9 @@ manifest:
   reproduce:
     exe: False
 
-# set number of cores per node (28 for normalbw, 48 for normal on gadi)
+# set number of cores per node (28 for normalbw, 48 for normal on gadi), 
 platform:
-    nodesize: 32
+    nodesize: 112
 
 # sweep and resubmit on specific errors - see https://github.com/payu-org/payu/issues/241#issuecomment-610739771
 userscripts:
