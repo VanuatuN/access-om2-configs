@@ -12,7 +12,7 @@ scheduler: slurm
 walltime: 09:00:00
 jobname: 1deg_jra55_ryf
 mem: 1000GB
-account: ICT23_ESP_1
+account: ICT25_MHPC 
 partition: dcgp_usr_prod
 #project: do not set for slurm, creates separate folder 
 ncpus: 560
@@ -23,14 +23,14 @@ npernode: 112
 
 modules:
   use:
-      - /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/modules
+      - /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/modules/linux-rhel8-x86_64
   load:
-      - access-om2/access-om2-lmgfria
-      - intel-oneapi-compilers/2021.2.0-xhgnqpv
-      - netcdf-c/4.7.4-i3xnywb
-      - netcdf-fortran/4.5.2-6aak3sc
-      - openmpi/4.1.4-z72sfno
-      - parallelio/2.5.2-7dpmxg3
+      - access-om2/access-om2-o33figh
+      - intel-oneapi-compilers/2021.2.0-p7vtyvv
+      - netcdf-c/4.7.4-d4klyvu 
+      - netcdf-fortran/4.5.2-5ln2rw
+      - parallelio/2.5.2-fmgl254 
+      - openmpi/4.1.4-ga6avsd
 # Sync options for automatically copying data from ephemeral scratch space to 
 # longer term storage
 sync:
@@ -49,7 +49,7 @@ input:
 submodels:
     - name: atmosphere
       model: yatm
-      exe: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/libaccessom2-access-om2-shkjnrowt2akfatdybsizrujxwfnam7f/bin/yatm.exe
+      exe: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/libaccessom2-access-om2-lnlbi4d7tcxgoecguezpvjwbg6jkehzc/bin/yatm.exe
       input:
             - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/rmp_jrar_to_cict_CONSERV.nc
             - /leonardo/home/userexternal/ntilinin/make_ryf
@@ -62,7 +62,7 @@ submodels:
 
     - name: ocean
       model: mom
-      exe: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/mom5-access-om2-bkjgbganje2ypawu2td25fk5eyfwi3ea/bin/fms_ACCESS-OM.x
+      exe: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/mom5-access-om2-ogthsyx7h5fri5tww7aukcs6ifizlxwm/bin/fms_ACCESS-OM.x
       input:
           - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/grids/mosaic/global.1deg/2020.05.30/grid_spec.nc
           - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ocean/grids/mosaic/global.1deg/2020.05.30/ocean_hgrid.nc
@@ -86,7 +86,7 @@ submodels:
 
     - name: ice
       model: cice5
-      exe: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/cice5-access-om2-ibzshgj256fxgkuxkqavttdzq3txzc7h/bin/cice_auscom_360x300_24x1_24p.exe
+      exe: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/cice5-access-om2-woizzl5sdrgejgmrvayt7gax5gmrxxgj/bin/cice_auscom_360x300_24x1_24p.exe
       input:
         - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/grids/global.1deg/2020.05.30/grid.nc
         - /leonardo_scratch/fast/ICT24_MHPC/ntilinin/INPUT/access-om2/ice/grids/global.1deg/2020.10.22/kmt.nc
@@ -111,7 +111,7 @@ collate:
   partition: dcgp_usr_prod
 
 #  queue: normal
-  exe: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/mom5-access-om2-bkjgbganje2ypawu2td25fk5eyfwi3ea/bin/mppnccombine.spack
+  exe: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/mom5-access-om2-ogthsyx7h5fri5tww7aukcs6ifizlxwm/bin/mppnccombine.spack
 
 # Misc
 runlog: true
@@ -136,5 +136,5 @@ platform:
 userscripts:
     error: tools/resub.sh
     run: rm -f resubmit.count
-    sync: /leonardo_scratch/large/userexternal/ntilinin/om2-scripts/concatenate_ice/concat_ice_daily.sh
+    sync: /leonardo/home/userexternal/ntilinin/om2-scripts/concatenate_ice/concat_ice_daily.sh
  
