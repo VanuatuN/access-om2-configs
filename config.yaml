@@ -18,6 +18,7 @@ partition: dcgp_usr_prod
 ncpus: 560
 nnodes: 5
 npernode: 112
+pmix: pmix_v3
 
 
 
