@@ -32,6 +32,7 @@ modules:
       - netcdf-fortran/4.5.2-5ln2rw
       - parallelio/2.5.2-fmgl254 
       - openmpi/4.1.4-ga6avsd
+      - pmix@4.2.2
 # Sync options for automatically copying data from ephemeral scratch space to 
 # longer term storage
 sync:
