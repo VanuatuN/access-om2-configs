@@ -66,7 +66,7 @@ submodels:
       nnodes: 1
       npernode: 1
       partition: dcgp_usr_prod
-      #mem: 1000GB
+      mem: 100GB
 
       
 
