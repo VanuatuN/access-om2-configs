@@ -11,7 +11,7 @@ scheduler: slurm
 #queue: do not set for slurm
 walltime: 09:00:00
 jobname: 1deg_jra55_ryf
-mem: 100G
+mem: 1000G
 account: ICT25_MHPC 
 partition: dcgp_usr_prod
 #project: do not set for slurm, creates separate folder 
@@ -66,7 +66,7 @@ submodels:
       nnodes: 1
       npernode: 1
       partition: dcgp_usr_prod
-      mem: 100GB
+      mem: 1000GB
 
       
 
@@ -91,7 +91,7 @@ submodels:
       nnodes: 3
       npernode: 112  
       partition: dcgp_usr_prod
-      mem: 500GB
+      mem: 1000GB
 
 
 
@@ -109,7 +109,7 @@ submodels:
       nnodes: 1
       npernode: 112  
       partition: dcgp_usr_prod
-      mem: 100GB
+      mem: 1000GB
      
 
 # Collation
