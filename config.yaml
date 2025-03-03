@@ -11,7 +11,7 @@ scheduler: slurm
 #queue: do not set for slurm
 walltime: 09:00:00
 jobname: 1deg_jra55_ryf
-mem: 1000G
+mem: 200G
 account: ICT25_MHPC 
 partition: dcgp_usr_prod
 #project: do not set for slurm, creates separate folder 
@@ -66,7 +66,7 @@ submodels:
       nnodes: 1
       npernode: 1
       partition: dcgp_usr_prod
-      mem: 1000GB
+      mem: 200GB
 
       
 
@@ -91,7 +91,7 @@ submodels:
       nnodes: 3
       npernode: 112  
       partition: dcgp_usr_prod
-      mem: 1000GB
+      mem: 200GB
 
 
 
@@ -109,7 +109,7 @@ submodels:
       nnodes: 1
       npernode: 112  
       partition: dcgp_usr_prod
-      mem: 1000GB
+      mem: 200GB
      
 
 # Collation
@@ -128,6 +128,11 @@ collate:
 # Misc
 runlog: true
 stacksize: unlimited
+env:
+  LD_LIBRARY_PATH: '/leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/openmpi-4.1.4-ga6avsdxmjya35twagfjts7jp3yahbwt/lib:$LD_LIBRARY_PATH'
+  OMPI_MCA_mtl: 'OMPI_MCA_btl_tcp_if_include'
+  MCA_IO: 'ompio'
+  MCA_IO_OMPIO_NUM_AGGREGATORS: '1'
 restart_freq: 5YS
 experiment: 1deg_jra55_ryf_5yr
 laboratory: /leonardo_scratch/fast/ICT25_MHPC/ntilinin/1deg_jra55_ryf_configured
