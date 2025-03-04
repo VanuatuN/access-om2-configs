@@ -33,18 +33,6 @@ modules:
       - parallelio/2.5.2-fmgl254 
       - openmpi/4.1.4-ga6avsd
       - pmix@4.2.2
-# Sync options for automatically copying data from ephemeral scratch space to 
-# longer term storage
-sync:
-    enable: False # set path below and change to true
-    #path: null # Set to location on /g/data or a remote server and path (rsync syntax)
-    path: /leonardo_scratch/fast/ICT25_MHPC/ntilinin/1deg_jra55_ryf
-    restarts: True 
-    exclude_uncollated: False
-    #remove_local_files: True
-    #remove_local_dirs: True
-    mem: 2G
-    nnodes: 1
 
 # Model configuration
 name: common
@@ -66,7 +54,7 @@ submodels:
       nnodes: 1
       npernode: 1
       partition: dcgp_usr_prod
-      mem: 200GB
+      #mem: 200GB
 
       
 
@@ -88,10 +76,10 @@ submodels:
           - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ocean/tides/global.1deg/2020.05.30/roughness_cdbot.nc
           - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ocean/surface_salt_restoring/global.1deg/2020.05.30/salt_sfc_restore.nc
       ncpus: 216
-      nnodes: 3
+      nnodes: 2
       npernode: 112  
       partition: dcgp_usr_prod
-      mem: 200GB
+      #mem: 200GB
 
 
 
@@ -109,7 +97,7 @@ submodels:
       nnodes: 1
       npernode: 112  
       partition: dcgp_usr_prod
-      mem: 200GB
+     #mem: 200GB
      
 
 # Collation
@@ -121,23 +109,30 @@ collate:
   nnodes: 1
   npernode: 112
   partition: dcgp_usr_prod
-
 #  queue: normal
   exe: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/mom5-access-om2-ogthsyx7h5fri5tww7aukcs6ifizlxwm/bin/mppnccombine.spack
+
+# Sync options for automatically copying data from ephemeral scratch space to 
+# longer term storage
+sync:
+    enable: False # set path below and change to true
+    #path: null # Set to location on /g/data or a remote server and path (rsync syntax)
+    path: /leonardo_scratch/fast/ICT25_MHPC/ntilinin/1deg_jra55_ryf
+    restarts: True 
+    exclude_uncollated: False
+    #remove_local_files: True
+    #remove_local_dirs: True
+    mem: 2G
+    nnodes: 1
 
 # Misc
 runlog: true
 stacksize: unlimited
 
-# env:
-#   LD_LIBRARY_PATH: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/openmpi-4.1.4-ga6avsdxmjya35twagfjts7jp3yahbwt/lib:$LD_LIBRARY_PATH
-#   OMPI_MCA_mtl: OMPI_MCA_btl_tcp_if_include
-#   MCA_IO: ompio
-#   MCA_IO_OMPIO_NUM_AGGREGATORS: 1
-restart_freq: 5YS
+restart_freq: 1YS
 experiment: 1deg_jra55_ryf_5yr
 laboratory: /leonardo_scratch/fast/ICT25_MHPC/ntilinin/1deg_jra55_ryf_configured
-mpirun: --mca io ompio --mca io_ompio_num_aggregators 1 
+#mpirun: --mca io ompio --mca io_ompio_num_aggregators 1 
 #mpirun: --mca btl_tcp_if_exclude virbr0,lo
 mpi:
   runcmd: srun
@@ -145,7 +140,10 @@ mpi:
 qsub_flags: umask 027
 env:
     UCX_LOG_LEVEL: 'error'
-
+    LD_LIBRARY_PATH: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/openmpi-4.1.4-ga6avsdxmjya35twagfjts7jp3yahbwt/lib:$LD_LIBRARY_PATH
+    OMPI_MCA_btl_tcp_if_includel: ib0
+    MCA_IO: ompio 
+    MCA_IO_OMPIO_NUM_AGGREGATORS: 1
 manifest:
   reproduce:
     exe: False
