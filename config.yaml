@@ -9,15 +9,15 @@
 
 scheduler: slurm
 #queue: do not set for slurm
-walltime: 09:00:00
+walltime: 03:00:00
 jobname: 1deg_jra55_ryf
 mem: 200G
 account: ICT25_MHPC 
 partition: dcgp_usr_prod
 #project: do not set for slurm, creates separate folder 
-ncpus: 560
-nnodes: 5
-npernode: 112
+#ncpus: 560
+nnodes: 3
+#npernode: 112
 #pmix: pmix_v3
 
 
@@ -77,7 +77,7 @@ submodels:
           - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ocean/surface_salt_restoring/global.1deg/2020.05.30/salt_sfc_restore.nc
       ncpus: 216
       nnodes: 2
-      npernode: 112  
+      npernode: 108  
       partition: dcgp_usr_prod
       #mem: 200GB
 
@@ -95,7 +95,7 @@ submodels:
         - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/monthly_sstsss.nc
       ncpus: 24
       nnodes: 1
-      npernode: 112  
+      npernode: 24  
       partition: dcgp_usr_prod
      #mem: 200GB
      
@@ -107,7 +107,7 @@ collate:
   mem: 30G
   ncpus: 4
   nnodes: 1
-  npernode: 112
+  npernode: 4
   partition: dcgp_usr_prod
 #  queue: normal
   exe: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/mom5-access-om2-ogthsyx7h5fri5tww7aukcs6ifizlxwm/bin/mppnccombine.spack
@@ -123,7 +123,9 @@ sync:
     #remove_local_files: True
     #remove_local_dirs: True
     mem: 2G
+    ncpus: 4
     nnodes: 1
+    npernode: 4
 
 # Misc
 runlog: true
