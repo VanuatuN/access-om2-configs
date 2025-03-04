@@ -16,7 +16,7 @@ account: ICT25_MHPC
 partition: dcgp_usr_prod
 #project: do not set for slurm, creates separate folder 
 ncpus: 241
-nnodes: 3
+nnodes: 4
 #npernode: 112
 #pmix: pmix_v3
 
