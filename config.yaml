@@ -127,7 +127,7 @@ sync:
     nnodes: 1
     npernode: 4
 
-# Misc
+# Miscls
 runlog: true
 stacksize: unlimited
 
