@@ -103,7 +103,7 @@ submodels:
 # Collation
 collate:
   restart: false
-  walltime: 00:02:00
+  walltime: 01:00:00
   mem: 30G
   ncpus: 4
   nnodes: 1
@@ -131,7 +131,7 @@ sync:
 runlog: true
 stacksize: unlimited
 
-restart_freq: 1YS
+restart_freq: 5YS
 experiment: 1deg_jra55_ryf_5yr
 laboratory: /leonardo_scratch/fast/ICT25_MHPC/ntilinin/1deg_jra55_ryf_configured
 #mpirun: --mca io ompio --mca io_ompio_num_aggregators 1 
