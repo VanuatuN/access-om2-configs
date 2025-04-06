@@ -9,7 +9,7 @@
 
 scheduler: slurm
 #queue: do not set for slurm
-walltime: 01:00:00
+walltime: 02:00:00
 jobname: 1deg_jra55_ryf_bench
 mem: 200G
 account: ICT25_MHPC 
