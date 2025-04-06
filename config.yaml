@@ -93,10 +93,10 @@ submodels:
         - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/o2i.nc
         - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/u_star.nc
         - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/monthly_sstsss.nc
-      ncpus: 216
+      ncpus: 112
       #ncpus: 24
       nnodes: 1
-      npernode: 108
+      npernode: 112
       #npernode: 24  
       partition: dcgp_usr_prod
      #mem: 200GB
