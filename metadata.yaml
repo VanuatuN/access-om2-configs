@@ -1,13 +1,13 @@
 contact: Add your name here
 email: Add your email address here
 created: '2025-02-28'
-description: "1 degree ACCESS-OM2 global model configuration under the RYF9091 Repeat\n
-  Year Forcing strategy outlined by Stewart et al. (2020), \nhttps://doi.org/10.1016/j.ocemod.2019.101557.\n
-  The configuration is based on that described in Kiss et al. (2020),\nhttps://doi.org/10.5194/gmd-13-401-2020,
-  but with many improvements.\nInitial conditions are WOA13v2 potential temperature
-  and practical salinity.\nRun with JRA55-do v1.4.0 RYF9091 (1 May 1990 - 30 April
-  1991) repeated forcing\nwith all solid runoff converted to liquid runoff with no
-  heat transfer.\nSpin up starts from a nominal year of 1 Jan 1900."
+description: "1 degree ACCESS-OM2 global model configuration under the RYF9091 Repeat\n\
+  \ Year Forcing strategy outlined by Stewart et al. (2020), \nhttps://doi.org/10.1016/j.ocemod.2019.101557.\n\
+  \ The configuration is based on that described in Kiss et al. (2020),\nhttps://doi.org/10.5194/gmd-13-401-2020,\
+  \ but with many improvements.\nInitial conditions are WOA13v2 potential temperature\
+  \ and practical salinity.\nRun with JRA55-do v1.4.0 RYF9091 (1 May 1990 - 30 April\
+  \ 1991) repeated forcing\nwith all solid runoff converted to liquid runoff with\
+  \ no heat transfer.\nSpin up starts from a nominal year of 1 Jan 1900."
 notes: |-
   COSIMA request that users of this or other ACCESS-OM2 model code or output data:
   (a) consider citing Kiss et al. (2020) [http://doi.org/10.5194/gmd-13-401-2020]
@@ -32,7 +32,7 @@ license: CC-BY-4.0
 model: ACCESS-OM2
 version: '2.0'
 url: https://github.com/ACCESS-NRI/access-om2-configs
-experiment_uuid: 7999bce5-f82b-4bb8-b44b-b0f3a538f88a
+experiment_uuid: b00168e5-5001-4111-9f8c-09ee23ec8b82
 name: 1deg_jra55_ryf-expt-7999bce5
 schema_version:  # The version of the schema (string)
 long_description: # Long description of the experiment (string)
