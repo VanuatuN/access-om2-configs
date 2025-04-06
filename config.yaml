@@ -15,8 +15,8 @@ mem: 200G
 account: ICT25_MHPC 
 partition: dcgp_usr_prod
 #project: do not set for slurm, creates separate folder 
-ncpus: 560
-nnodes: 5
+ncpus: 672
+nnodes: 6
 #npernode: 112
 #pmix: pmix_v3
 
@@ -93,9 +93,9 @@ submodels:
         - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/o2i.nc
         - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/u_star.nc
         - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/monthly_sstsss.nc
-      nnodes: 1
-      npernode: 112
-      ncpus: 112     
+      nnodes: 2
+      npernode: 84
+      ncpus: 168     
       #npernode: 24
       #ncpus: 24  
       partition: dcgp_usr_prod
