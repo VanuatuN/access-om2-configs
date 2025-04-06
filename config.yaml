@@ -9,7 +9,7 @@
 
 scheduler: slurm
 #queue: do not set for slurm
-walltime: 03:00:00
+walltime: 01:00:00
 jobname: 1deg_jra55_ryf
 mem: 200G
 account: ICT25_MHPC 
@@ -93,16 +93,18 @@ submodels:
         - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/o2i.nc
         - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/u_star.nc
         - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/monthly_sstsss.nc
-      ncpus: 24
+      ncpus: 216
+      #ncpus: 24
       nnodes: 1
-      npernode: 24  
+      npernode: 108
+      #npernode: 24  
       partition: dcgp_usr_prod
      #mem: 200GB
      
 
 # Collation
 collate:
-  restart: false
+  restart: True
   walltime: 01:00:00
   mem: 30G
   ncpus: 4
