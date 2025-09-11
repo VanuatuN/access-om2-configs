@@ -356,6 +356,42 @@ work/atmosphere/INPUT/test_modules.py:
   hashes:
     binhash: 132b7e2fbc92590a5c91cdb419e44564
     md5: 83e4a71438a2d6479eba22006a6cdf72
+work/ice/RESTART/grid.nc:
+  copy: true
+  fullpath: /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ice/grids/global.1deg/2020.05.30/grid.nc
+  hashes:
+    binhash: 844f8b19d06d11799433843b2c6d47f8
+    md5: 1213e346055ee073fe33dc12578d99c6
+work/ice/RESTART/i2o.nc:
+  copy: true
+  fullpath: /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/i2o.nc
+  hashes:
+    binhash: 3ed581cd04ee88182b4531bebd319175
+    md5: c96e06c3c80c0f680545db59ed3349e5
+work/ice/RESTART/kmt.nc:
+  copy: true
+  fullpath: /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ice/grids/global.1deg/2020.10.22/kmt.nc
+  hashes:
+    binhash: f65a968dca12b94d17a405c71e77b984
+    md5: 1f9806c646a620378e5257e480bc9df7
+work/ice/RESTART/monthly_sstsss.nc:
+  copy: true
+  fullpath: /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/monthly_sstsss.nc
+  hashes:
+    binhash: d6d1f41e4c71df43168c5a16ac9f60eb
+    md5: 323d4c605f83f4d7d3126da70153c2ed
+work/ice/RESTART/o2i.nc:
+  copy: true
+  fullpath: /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/o2i.nc
+  hashes:
+    binhash: ecf9f7402ea529ff70a1fc4efe4c7b79
+    md5: 3498246dcd7da40d3b8c6b4a908b260f
+work/ice/RESTART/u_star.nc:
+  copy: true
+  fullpath: /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/u_star.nc
+  hashes:
+    binhash: 6aac2c3a14e660f99a3112f9845f8219
+    md5: 68cf0ef92576f96ef085cd7f243d0c39
 work/ocean/INPUT/chl.nc:
   fullpath: /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ocean/chlorophyll/global.1deg/2020.05.30/chl.nc
   hashes:
