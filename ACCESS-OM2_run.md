@@ -1,4 +1,4 @@
-## 🚀 ACCESS-OM2 Environment Setup & Running Guide
+## ACCESS-OM2 Environment Setup & Running Guide
 
 This guide explains how to activate the environment, install the `payu` workflow manager, and run the ACCESS-OM2 model. All commands are intended for use in a Linux shell.
 
@@ -76,7 +76,7 @@ Please see the extensive Payu documentation for more details (2️⃣).
 
 ---
 
-### ⚙️ Example `config.yaml` Explanation
+### Example `config.yaml` Explanation
 
 The `config.yaml` file controls how `payu` submits jobs, configures resources, loads modules, and runs submodels. Below is a breakdown of its key sections:
 
@@ -206,7 +206,7 @@ userscripts:
 ✅ With this configuration, you can fully customize how `payu` runs ACCESS-OM2 on SLURM-based HPC systems like Leonardo.
 
 
-### 📂 Output Storage and Post-Processing
+### Output Storage and Post-Processing
 
 * Model outputs (logs, restart files, collated NetCDF files) are stored in the **laboratory/experiment** directory defined in the `config.yaml`:
 
@@ -236,7 +236,7 @@ cd /leonardo_scratch/fast/ICT25_MHPC/ntilinin/1deg_jra55_ryf_bench_cice5/1deg_jr
 
 * After collation, the unified files can be analyzed directly with Python (e.g., `xarray`, `netCDF4`) or visualization tools like NCL and Panoply.
 
-### 📊 Analysis of the Model Run
+### Analysis of the Model Run
 
 1. **Build the datastore for your output:**
 
@@ -251,7 +251,5 @@ cd /leonardo_scratch/fast/ICT25_MHPC/ntilinin/1deg_jra55_ryf_bench_cice5/1deg_jr
 
    * [COSIMA Recipes Repository](https://github.com/COSIMA/cosima-recipes)
 
----
 
-✅ With this configuration and workflow, you can fully customize how `payu` runs ACCESS-OM2 on SLURM-based HPC systems like Leonardo, manage outputs, and analyze the results efficiently.
 
