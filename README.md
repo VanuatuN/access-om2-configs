@@ -9,7 +9,7 @@ This is a **physics-only** configuration, adapted and ported to the **Leonardo**
 
 ## Repository contents
 
-- **ACCESS-NRI_install.md** — Instructions for ACCESS-OM2 installation on Leonardo.
+- **[ACCESS-NRI_install](ACCESS-NRI_install.md).md** — Instructions for ACCESS-OM2 installation on Leonardo.
 - **ACCESS-OM2_run.md** — Instructions for running the RYF experiment on Leonardo and Analysis of the Output.    
 - **MHPC_SISSA_ICTP_Thesis_Tilinina.pdf** — Detailed documentation of the porting process to Leonardo HPC (Master Thesis).
 
