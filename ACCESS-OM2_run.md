@@ -11,7 +11,7 @@ This guide explains how to activate the environment, install the `payu` workflow
 module load access-om2/
 ```
 
-Export of these variables is extremely (!) important for proper InfinfBand exchage of MPI packets, execute this:
+Export of these variables is extremely (!) important for proper InfiniBand exchange of MPI packets. Execute:
 
 
 ```bash
@@ -21,7 +21,7 @@ export MCA_IO=ompio
 export MCA_IO_OMPIO_NUM_AGGREGATORS=1
 ```
 
-### 2️⃣ Install **payu** Manager
+### 2️⃣ Install **Payu** Manager
 
 [Payu](https://payu.readthedocs.io/en/latest/) is a workflow management tool for running ACCESS family models in supercomputing environments. Additional resources:
 
@@ -53,6 +53,10 @@ git clone --branch leonardo --single-branch git@github.com:VanuatuN/payu.git
 
 * Prepare your `config.yaml` file with the desired configuration and version.
 
+https://payu.readthedocs.io/en/latest/config.html#config
+
+Below (next section) is the step-by-step explanation of the `config.yaml.`
+
 * Use `payu` to launch your experiment.
 
 Example:
@@ -68,7 +72,7 @@ payu sweep
 payu run
 ```
 
-Please, look up for the extensive documentation and instuctions for Payu above (2️⃣). 
+Please see the extensive Payu documentation for more details (2️⃣).
 
 ---
 
@@ -232,30 +236,22 @@ cd /leonardo_scratch/fast/ICT25_MHPC/ntilinin/1deg_jra55_ryf_bench_cice5/1deg_jr
 
 * After collation, the unified files can be analyzed directly with Python (e.g., `xarray`, `netCDF4`) or visualization tools like NCL and Panoply.
 
-#### 🔧 Analysis of the model run 
+### 📊 Analysis of the Model Run
 
-The ACCESS-NRI common pratice
+1. **Build the datastore for your output:**
 
-1. Build the datastore for your output:
+   * [ACCESS-NRI Intake Catalog Documentation](https://access-nri-intake-catalog.readthedocs.io/en/latest/datastores/builders.html)
+   * [Intake-ESM Guide](https://intake-esm.readthedocs.io/en/stable/how-to/build-a-catalog-from-timeseries-files.html)
 
- https://access-nri-intake-catalog.readthedocs.io/en/latest/datastores/builders.html
+   On Leonardo, you can create the intake catalog with the provided **`catalog.ipynb`** (added to this repo). Once created, all recipes can be applied to the catalog.
 
- https://intake-esm.readthedocs.io/en/stable/how-to/build-a-catalog-from-timeseries-files.html
+   Related GitHub issue with discussion: [ACCESS-NRI/access-nri-intake-catalog#357](https://github.com/ACCESS-NRI/access-nri-intake-catalog/issues/357#issuecomment-2692960625)
 
- On Leonardo I created the intake catalog with **catalog.ipynb** added to this repo. 
+2. **Use COSIMA Recipes or create your own analysis tools:**
 
- After the catalog created all recipies can by applied to the created catalog. 
+   * [COSIMA Recipes Repository](https://github.com/COSIMA/cosima-recipes)
 
- Also, the issue that I raised on github and responces:
+---
 
- https://github.com/ACCESS-NRI/access-nri-intake-catalog/issues/357#issuecomment-2692960625
-
-
-
-2. Use CookBook or create your own analysis tool:
-
-https://github.com/COSIMA/cosima-recipes
-
-
-
+✅ With this configuration and workflow, you can fully customize how `payu` runs ACCESS-OM2 on SLURM-based HPC systems like Leonardo, manage outputs, and analyze the results efficiently.
 
