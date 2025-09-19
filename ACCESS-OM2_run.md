@@ -11,6 +11,16 @@ This guide explains how to activate the environment, install the `payu` workflow
 module load access-om2/
 ```
 
+Export of these variables is extremely (!) important for proper InfinfBand exchage of MPI packets, execute this:
+
+
+```bash
+export LD_LIBRARY_PATH=/leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/openmpi-4.1.4-ga6avsdxmjya35twagfjts7jp3yahbwt/lib:$LD_LIBRARY_PATH
+export OMPI_MCA_btl_tcp_if_include=ib0
+export MCA_IO=ompio
+export MCA_IO_OMPIO_NUM_AGGREGATORS=1
+```
+
 ### 2️⃣ Install **payu** Manager
 
 [Payu](https://payu.readthedocs.io/en/latest/) is a workflow management tool for running ACCESS family models in supercomputing environments. Additional resources:
@@ -190,3 +200,62 @@ userscripts:
 ---
 
 ✅ With this configuration, you can fully customize how `payu` runs ACCESS-OM2 on SLURM-based HPC systems like Leonardo.
+
+
+### 📂 Output Storage and Post-Processing
+
+* Model outputs (logs, restart files, collated NetCDF files) are stored in the **laboratory/experiment** directory defined in the `config.yaml`:
+
+```yaml
+laboratory: /leonardo_scratch/fast/ICT25_MHPC/ntilinin/1deg_jra55_ryf_bench_cice5
+experiment: 1deg_jra55_ryf_5yr
+```
+
+* Example output path:
+
+```
+/leonardo_scratch/fast/ICT25_MHPC/ntilinin/1deg_jra55_ryf_bench_cice5/1deg_jra55_ryf_5yr/output000/
+```
+
+* **Collation step** merges split NetCDF files into larger, analysis-ready datasets using `mppnccombine.spack`.
+* If `sync.enable = True`, Payu will automatically copy results from scratch to the long-term storage path set in `sync.path`.
+
+#### 🔧 Manual Processing Example
+
+```bash
+# Navigate to first output folder
+cd /leonardo_scratch/fast/ICT25_MHPC/ntilinin/1deg_jra55_ryf_bench_cice5/1deg_jra55_ryf_5yr/output000
+
+# Run collation manually
+/path/to/mppnccombine.spack -r ocean.nc ocean.nc.*.nc
+```
+
+* After collation, the unified files can be analyzed directly with Python (e.g., `xarray`, `netCDF4`) or visualization tools like NCL and Panoply.
+
+#### 🔧 Analysis of the model run 
+
+The ACCESS-NRI common pratice
+
+1. Build the datastore for your output:
+
+ https://access-nri-intake-catalog.readthedocs.io/en/latest/datastores/builders.html
+
+ https://intake-esm.readthedocs.io/en/stable/how-to/build-a-catalog-from-timeseries-files.html
+
+ On Leonardo I created the intake catalog with **catalog.ipynb** added to this repo. 
+
+ After the catalog created all recipies can by applied to the created catalog. 
+
+ Also, the issue that I raised on github and responces:
+
+ https://github.com/ACCESS-NRI/access-nri-intake-catalog/issues/357#issuecomment-2692960625
+
+
+
+2. Use CookBook or create your own analysis tool:
+
+https://github.com/COSIMA/cosima-recipes
+
+
+
+
