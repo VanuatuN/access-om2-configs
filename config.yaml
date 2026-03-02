@@ -10,23 +10,25 @@
 scheduler: slurm
 #queue: do not set for slurm
 walltime: 03:00:00
-jobname: 1deg_jra55_ryf_bench_cice5
+jobname: 1deg_jra55_ryf
 mem: 200G
-account: ICT25_MHPC 
-partition: dcgp_usr_prod
+#account: sail 
+partition: rack1
 #project: do not set for slurm, creates separate folder 
-ncpus: 672
-nnodes: 6
+ncpus: 380
+nnodes: 5
 #npernode: 112
 #pmix: pmix_v3
 
 
 
-modules:
-  use:
-      - /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/modules/linux-rhel8-x86_64
-  load:
-      - access-om2
+#modules:
+  # use:
+  #     - /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/modules/linux-rhel8-x86_64
+#  load:
+      # - access-om2
+      # - compiler/latest
+      # - mpi/2021.12
       #- intel-oneapi-compilers/2021.2.0-p7vtyvv
       #-  netcdf-c/4.7.4-d4klyvu 
       #- netcdf-fortran/4.5.2-5ln2rw
@@ -38,67 +40,67 @@ modules:
 name: common
 model: access-om2
 input:
-  - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/JRA55_MOM1_conserve2nd.nc
-  - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/JRA55_MOM1_patch.nc
-  - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/rmp_jra55_cice_1st_conserve.nc
-  - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/rmp_jra55_cice_2nd_conserve.nc
-  - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/rmp_jra55_cice_patch.nc
+  - /storage/ekman/tilinina/ACCESS-OM2/INPUT/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/JRA55_MOM1_conserve2nd.nc
+  - /storage/ekman/tilinina/ACCESS-OM2/INPUT/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/JRA55_MOM1_patch.nc
+  - /storage/ekman/tilinina/ACCESS-OM2/INPUT/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/rmp_jra55_cice_1st_conserve.nc
+  - /storage/ekman/tilinina/ACCESS-OM2/INPUT/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/rmp_jra55_cice_2nd_conserve.nc
+  - /storage/ekman/tilinina/ACCESS-OM2/INPUT/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/rmp_jra55_cice_patch.nc
 submodels:
     - name: atmosphere
       model: yatm
-      exe: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/libaccessom2-access-om2-lnlbi4d7tcxgoecguezpvjwbg6jkehzc/bin/yatm.exe
+      exe: yatm.exe
       input:
-            - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/rmp_jrar_to_cict_CONSERV.nc
-            - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/make_ryf
+            - /storage/ekman/tilinina/ACCESS-OM2/INPUT/access-om2/remapping_weights/JRA55/global.1deg/2020.05.30/rmp_jrar_to_cict_CONSERV.nc
+            - /storage/ekman/tilinina/ACCESS-OM2/make_ryf
       ncpus: 1
       nnodes: 1
       npernode: 1
-      partition: dcgp_usr_prod
+      partition: rack1
       #mem: 200GB
 
       
 
     - name: ocean
       model: mom
-      exe: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/mom5-access-om2-ogthsyx7h5fri5tww7aukcs6ifizlxwm/bin/fms_ACCESS-OM.x
+      exe: mom5_access_om
       input:
-          - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ocean/grids/mosaic/global.1deg/2020.05.30/grid_spec.nc
-          - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ocean/grids/mosaic/global.1deg/2020.05.30/ocean_hgrid.nc
-          - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ocean/grids/mosaic/global.1deg/2020.05.30/ocean_mosaic.nc
-          - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ocean/grids/bathymetry/global.1deg/2020.10.22/topog.nc
-          - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ocean/grids/bathymetry/global.1deg/2020.10.22/ocean_mask.nc
-          - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ocean/grids/vertical/global.1deg/2020.10.22/ocean_vgrid.nc
-          - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ocean/processor_masks/global.1deg/216.16x15/2020.05.30/ocean_mask_table
-          - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ocean/chlorophyll/global.1deg/2020.05.30/chl.nc
-          - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ocean/initial_conditions/global.1deg/2020.10.22/ocean_temp_salt.res.nc
-          - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ocean/tides/global.1deg/2020.05.30/tideamp.nc
-          - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ocean/tides/global.1deg/2020.05.30/roughness_amp.nc
-          - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ocean/tides/global.1deg/2020.05.30/roughness_cdbot.nc
-          - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ocean/surface_salt_restoring/global.1deg/2020.05.30/salt_sfc_restore.nc
-      ncpus: 216
-      nnodes: 2
-      npernode: 108  
-      partition: dcgp_usr_prod
+          - /storage/ekman/tilinina/ACCESS-OM2/INPUT/access-om2/ocean/grids/mosaic/global.1deg/2020.05.30/grid_spec.nc
+          - /storage/ekman/tilinina/ACCESS-OM2/INPUT/access-om2/ocean/grids/mosaic/global.1deg/2020.05.30/ocean_hgrid.nc
+          - /storage/ekman/tilinina/ACCESS-OM2/INPUT/access-om2/ocean/grids/mosaic/global.1deg/2020.05.30/ocean_mosaic.nc
+          - /storage/ekman/tilinina/ACCESS-OM2/INPUT/access-om2/ocean/grids/bathymetry/global.1deg/2020.10.22/topog.nc
+          - /storage/ekman/tilinina/ACCESS-OM2/INPUT/access-om2/ocean/grids/bathymetry/global.1deg/2020.10.22/ocean_mask.nc
+          - /storage/ekman/tilinina/ACCESS-OM2/INPUT/access-om2/ocean/grids/vertical/global.1deg/2020.10.22/ocean_vgrid.nc
+          - /storage/ekman/tilinina/ACCESS-OM2/INPUT/access-om2/ocean/processor_masks/global.1deg/216.16x15/2020.05.30/ocean_mask_table
+          - /storage/ekman/tilinina/ACCESS-OM2/INPUT/access-om2/ocean/chlorophyll/global.1deg/2020.05.30/chl.nc
+          - /storage/ekman/tilinina/ACCESS-OM2/INPUT/access-om2/ocean/initial_conditions/global.1deg/2020.10.22/ocean_temp_salt.res.nc
+          - /storage/ekman/tilinina/ACCESS-OM2/INPUT/access-om2/ocean/tides/global.1deg/2020.05.30/tideamp.nc
+          - /storage/ekman/tilinina/ACCESS-OM2/INPUT/access-om2/ocean/tides/global.1deg/2020.05.30/roughness_amp.nc
+          - /storage/ekman/tilinina/ACCESS-OM2/INPUT/access-om2/ocean/tides/global.1deg/2020.05.30/roughness_cdbot.nc
+          - /storage/ekman/tilinina/ACCESS-OM2/INPUT/access-om2/ocean/surface_salt_restoring/global.1deg/2020.05.30/salt_sfc_restore.nc
+      ncpus: 228
+      nnodes: 3
+      npernode: 76  
+      partition: rack1
       #mem: 200GB
 
 
 
     - name: ice
       model: cice5
-      exe: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/cice5-access-om2-woizzl5sdrgejgmrvayt7gax5gmrxxgj/bin/cice_auscom_360x300_24x1_24p.exe
+      exe: cice_auscom_360x300_24x1_24p.exe
       input:
-        - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ice/grids/global.1deg/2020.05.30/grid.nc
-        - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ice/grids/global.1deg/2020.10.22/kmt.nc
-        - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/i2o.nc
-        - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/o2i.nc
-        - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/u_star.nc
-        - /leonardo_scratch/fast/ICT25_MHPC/ntilinin/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/monthly_sstsss.nc
-      nnodes: 2
-      npernode: 84
-      ncpus: 168     
+        - /storage/ekman/tilinina/ACCESS-OM2/INPUT/access-om2/ice/grids/global.1deg/2020.05.30/grid.nc
+        - /storage/ekman/tilinina/ACCESS-OM2/INPUT/access-om2/ice/grids/global.1deg/2020.10.22/kmt.nc
+        - /storage/ekman/tilinina/ACCESS-OM2/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/i2o.nc
+        - /storage/ekman/tilinina/ACCESS-OM2/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/o2i.nc
+        - /storage/ekman/tilinina/ACCESS-OM2/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/u_star.nc
+        - /storage/ekman/tilinina/ACCESS-OM2/INPUT/access-om2/ice/initial_conditions/global.1deg/2020.05.30/monthly_sstsss.nc
+      nnodes: 1
+      npernode: 76
+      ncpus: 76    
       #npernode: 24
       #ncpus: 24  
-      partition: dcgp_usr_prod
+      partition: rack1
      #mem: 200GB
      
 
@@ -110,24 +112,24 @@ collate:
   ncpus: 4
   nnodes: 1
   npernode: 4
-  partition: dcgp_usr_prod
+  partition: rack1
 #  queue: normal
-  exe: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/mom5-access-om2-ogthsyx7h5fri5tww7aukcs6ifizlxwm/bin/mppnccombine.spack
+  exe: mppnccombine
 
-# Sync options for automatically copying data from ephemeral scratch space to 
-# longer term storage
-sync:
-    enable: False # set path below and change to true
-    #path: null # Set to location on /g/data or a remote server and path (rsync syntax)
-    path: /leonardo_scratch/fast/ICT25_MHPC/ntilinin/1deg_jra55_ryf_bench_cice5 
-    restarts: True 
-    exclude_uncollated: False
-    #remove_local_files: True
-    #remove_local_dirs: True
-    mem: 2G
-    ncpus: 4
-    nnodes: 1
-    npernode: 4
+# # Sync options for automatically copying data from ephemeral scratch space to 
+# # longer term storage
+# sync:
+#     enable: False # set path below and change to true
+#     #path: null # Set to location on /g/data or a remote server and path (rsync syntax)
+#     path: /storage/ekman/tilinina/ACCESS-OM2/experiment/1deg_jra55_ryf
+#     restarts: True 
+#     exclude_uncollated: False
+#     #remove_local_files: True
+#     #remove_local_dirs: True
+#     mem: 2G
+#     ncpus: 4
+#     nnodes: 1
+#     npernode: 4
 
 # Miscls
 runlog: true
@@ -135,30 +137,31 @@ stacksize: unlimited
 
 restart_freq: 5YS
 experiment: 1deg_jra55_ryf_5yr
-laboratory: /leonardo_scratch/fast/ICT25_MHPC/ntilinin/1deg_jra55_ryf_bench_cice5 
+laboratory: /storage/ekman/tilinina/ACCESS-OM2/experiment/1deg_jra55_ryf
+
 #mpirun: --mca io ompio --mca io_ompio_num_aggregators 1 
 #mpirun: --mca btl_tcp_if_exclude virbr0,lo
 mpi:
   runcmd: srun
-#qsub_flags: -W umask=027
-qsub_flags: umask 027
-env:
-    UCX_LOG_LEVEL: 'error'
-    LD_LIBRARY_PATH: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/openmpi-4.1.4-ga6avsdxmjya35twagfjts7jp3yahbwt/lib:$LD_LIBRARY_PATH
-    OMPI_MCA_btl_tcp_if_includel: ib0
-    MCA_IO: ompio 
-    MCA_IO_OMPIO_NUM_AGGREGATORS: 1
+# #qsub_flags: -W umask=027
+# qsub_flags: umask 027
+# env:
+#     UCX_LOG_LEVEL: 'error'
+#     LD_LIBRARY_PATH: /leonardo/home/userexternal/ntilinin/ACCESS-NRI/release/linux-rhel8-x86_64/intel-2021.2.0/openmpi-4.1.4-ga6avsdxmjya35twagfjts7jp3yahbwt/lib:$LD_LIBRARY_PATH
+#     OMPI_MCA_btl_tcp_if_includel: ib0
+#     MCA_IO: ompio 
+#     MCA_IO_OMPIO_NUM_AGGREGATORS: 1
 manifest:
   reproduce:
     exe: False
 
 # set number of cores per node (28 for normalbw, 48 for normal on gadi), 
 platform:
-    nodesize: 112
+    nodesize: 76
 
 # sweep and resubmit on specific errors - see https://github.com/payu-org/payu/issues/241#issuecomment-610739771
 userscripts:
     error: tools/resub.sh
     run: rm -f resubmit.count
-    sync: /leonardo/home/userexternal/ntilinin/om2-scripts/concatenate_ice/concat_ice_daily.sh
+    sync: /storage/ekman/tilinina/ACCESS-OM2/om2-scripts/concatenate_ice/concat_ice_daily.sh
  
